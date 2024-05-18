@@ -96,7 +96,7 @@
 
 <hr>
 <h2 id="簡易超連結"><a href="#簡易超連結" class="headerlink" title="簡易超連結"></a>簡易超連結</h2><blockquote>
-<p><a href="https://google.com/">https://google.com</a><br><a href="mailto:&#x74;&#101;&#x78;&#x74;&#x40;&#101;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">&#x74;&#101;&#x78;&#x74;&#x40;&#101;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<p><a href="https://google.com/">https://google.com</a><br><a href="mailto:&#116;&#x65;&#x78;&#x74;&#64;&#x65;&#109;&#97;&#105;&#x6c;&#46;&#99;&#111;&#x6d;">&#116;&#x65;&#x78;&#x74;&#64;&#x65;&#109;&#97;&#105;&#x6c;&#46;&#99;&#111;&#x6d;</a></p>
 </blockquote>
 <figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&lt;網址或mail&gt;</span><br></pre></td></tr></table></figure>
 
@@ -212,7 +212,18 @@
 <li>Localization testing: <code>hexo clean &amp;&amp; hexo s.</code></li>
 <li>Deployment: <code>hexo g -d.</code></li>
 </ol>
-<p>test deployment</p>
+<h3 id="引用區塊-Block-Quote"><a href="#引用區塊-Block-Quote" class="headerlink" title="引用區塊 (Block Quote)"></a>引用區塊 (Block Quote)</h3><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote>
+
+<h3 id="程式碼區塊-Code-Block"><a href="#程式碼區塊-Code-Block" class="headerlink" title="程式碼區塊 (Code Block)"></a>程式碼區塊 (Code Block)</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">alert(&#x27;Hello World!&#x27;);</span><br><span class="line">System.out.println(&quot;Hello World&quot;);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">alert(<span class="string">&#x27;Hello World!&#x27;</span>);</span><br><span class="line">System.out.println(<span class="string">&quot;Hello World&quot;</span>);</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>test post asset</title>
+    <url>/2024/05/19/test-post-asset/</url>
+    <content><![CDATA[<h3 id="嵌入一張圖片"><a href="#嵌入一張圖片" class="headerlink" title="嵌入一張圖片"></a>嵌入一張圖片</h3><p><img src="/images/image.jpg"></p>
+<p><img src="https://megapx-assets.dcard.tw/images/68443d1c-ab65-42b9-a00e-a2b95c46fcd0/640.webp"></p>
 ]]></content>
   </entry>
 </search>
