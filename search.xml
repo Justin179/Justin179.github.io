@@ -96,7 +96,7 @@
 
 <hr>
 <h2 id="簡易超連結"><a href="#簡易超連結" class="headerlink" title="簡易超連結"></a>簡易超連結</h2><blockquote>
-<p><a href="https://google.com/">https://google.com</a><br><a href="mailto:&#116;&#x65;&#x78;&#x74;&#x40;&#x65;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;">&#116;&#x65;&#x78;&#x74;&#x40;&#x65;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;</a></p>
+<p><a href="https://google.com/">https://google.com</a><br><a href="mailto:&#x74;&#101;&#x78;&#x74;&#x40;&#101;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">&#x74;&#101;&#x78;&#x74;&#x40;&#101;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;</a></p>
 </blockquote>
 <figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&lt;網址或mail&gt;</span><br></pre></td></tr></table></figure>
 
