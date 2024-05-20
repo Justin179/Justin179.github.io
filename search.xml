@@ -1,52 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>圖片測試</title>
-    <url>/test-post-asset/</url>
-    <content><![CDATA[<h3 id="本地圖"><a href="#本地圖" class="headerlink" title="本地圖"></a>本地圖</h3><p><img src="/images/image.jpg"></p>
-<h3 id="網路圖-指定大小-200-300"><a href="#網路圖-指定大小-200-300" class="headerlink" title="網路圖 (指定大小 200 300)"></a>網路圖 (指定大小 200 300)</h3><img src="https://megapx-assets.dcard.tw/images/68443d1c-ab65-42b9-a00e-a2b95c46fcd0/640.webp" class="" width="200" height="300">
-
-<h3 id="網路圖-cloudinary"><a href="#網路圖-cloudinary" class="headerlink" title="網路圖 (cloudinary)"></a>網路圖 (cloudinary)</h3><p><img src="https://res.cloudinary.com/dhh0xolkd/image/upload/v1716112078/samples/4a86c_xiynjn.jpg" alt="4a86c"></p>
-<h3 id="網路圖-自動上傳-github-zoom-67"><a href="#網路圖-自動上傳-github-zoom-67" class="headerlink" title="網路圖 (自動上傳 github zoom 67%)"></a>網路圖 (自動上傳 github zoom 67%)</h3><img src="https://raw.githubusercontent.com/Justin179/Typora/main/data/q6CVnZ2YlKOesA.jpg" alt="q6CVnZ2YlKOesA" style="zoom:67%;" />]]></content>
-  </entry>
-  <entry>
-    <title>Hexo Quick Start</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. </p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<h3 id="Local-Deployment"><a href="#Local-Deployment" class="headerlink" title="Local Deployment"></a>Local Deployment</h3><ol>
-<li>Modify files locally.</li>
-<li>Localization testing: <code>hexo clean &amp;&amp; hexo s.</code></li>
-<li>Deployment: <code>hexo g -d.</code></li>
-</ol>
-<h3 id="引用區塊-Block-Quote"><a href="#引用區塊-Block-Quote" class="headerlink" title="引用區塊 (Block Quote)"></a>引用區塊 (Block Quote)</h3><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
-</blockquote>
-
-<h3 id="程式碼區塊-Code-Block"><a href="#程式碼區塊-Code-Block" class="headerlink" title="程式碼區塊 (Code Block)"></a>程式碼區塊 (Code Block)</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">pathSum</span><span class="params">(TreeNode root, <span class="type">int</span> targetSum)</span> &#123;</span><br><span class="line">    hmap = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">    count = <span class="number">0</span>;</span><br><span class="line">    dfs(root, <span class="number">0</span>, targetSum);</span><br><span class="line">    <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+    <title>網站建置中</title>
+    <url>/%E5%85%AC%E5%91%8A%E7%BD%AE%E9%A0%82/</url>
+    <content><![CDATA[<p><img src="https://raw.githubusercontent.com/Justin179/Typora/main/data/coming-soon.jpg" alt="網站建置中- 台灣富士金閥門"></p>
 ]]></content>
-      <categories>
-        <category>主分類1</category>
-        <category>分類2</category>
-        <category>分類3</category>
-        <category>主分類2</category>
-        <category>分類1</category>
-        <category>分類4</category>
-      </categories>
       <tags>
-        <tag>標籤1</tag>
-        <tag>標籤2</tag>
+        <tag>公告</tag>
       </tags>
   </entry>
 </search>
