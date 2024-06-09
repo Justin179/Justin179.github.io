@@ -1,12 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>網站建置中</title>
-    <url>/%E5%85%AC%E5%91%8A%E7%BD%AE%E9%A0%82/</url>
-    <content><![CDATA[<p><img src="https://raw.githubusercontent.com/Justin179/Typora/main/data/coming-soon.jpg" alt="網站建置中- 台灣富士金閥門"></p>
+    <title>Git日常指令</title>
+    <url>/Git%E6%97%A5%E5%B8%B8%E6%8C%87%E4%BB%A4/</url>
+    <content><![CDATA[<p>對目錄進行git版控 (files still <strong>untracked</strong>)</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+<p>stage目錄下全部檔案 (files <strong>tracked</strong>)</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+
+<p>commit 所有狀態為stage的檔案 到Local repo</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git commit -m &#x27;first commit&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>這圖說明了一切<img src="https://raw.githubusercontent.com/Justin179/Typora/main/data/git-commands-work.jpeg" style="zoom:80%;" /></p>
+<h4 id="有了local-repo之後-push-local-repo-to-remote-repo"><a href="#有了local-repo之後-push-local-repo-to-remote-repo" class="headerlink" title="有了local repo之後, push local repo to remote repo"></a>有了local repo之後, push local repo to remote repo</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git remote add origin https://github.com/&lt;user&gt;/&lt;repo&gt;.git</span><br><span class="line">git branch -M main</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>建立<code>local repo</code>跟<code>remote repo</code>的連結</li>
+<li>分支改名為main</li>
+<li><code>push local main to remote main</code></li>
+</ol>
+<p>指令在GitHub新增repo後都會給</p>
+<h4 id="HEAD-checkout"><a href="#HEAD-checkout" class="headerlink" title="HEAD &amp; checkout"></a>HEAD &amp; checkout</h4><p><strong><code>HEAD</code> 是 Git 中一個動態的指標</strong>，<mark>用來表示你目前所在的位置</mark></p>
+<p><code>git checkout &lt;sha1&gt;</code> 用<code>git checkout</code> 切到某個<code>commit</code>，<code>HEAD</code>就會跟到該<code>commit</code></p>
+<p><code>checkout</code>可以理解為取出，從<code>local repo</code>取出資料到<code>working directory</code></p>
+<p><code>git checkout -- .</code> <code>working directory</code>的<strong>資料還原</strong>到最新的<code>commit</code>(<code>HEAD</code>版本)</p>
+<h4 id="branch-name"><a href="#branch-name" class="headerlink" title="branch name"></a>branch name</h4><p><code>master</code>&#x2F;<code>main</code>&#x2F;<code>dev</code> 都是分支名稱，這些分支名稱都只是標籤，所謂的刪除分支本質上是在刪除標籤 (例如: <code>git branch -D dev</code>)，原本的<code>commit</code>都還是存在的</p>
+<p>補充:</p>
+<p>VS Code 讓Git版控變得直覺，細節的指令已經不重要 </p>
 ]]></content>
+      <categories>
+        <category>技術</category>
+        <category>Git</category>
+      </categories>
       <tags>
-        <tag>公告</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java Map 寫法優化</title>
+    <url>/Java%20Map%20%E5%AF%AB%E6%B3%95%E5%84%AA%E5%8C%96/</url>
+    <content><![CDATA[<p><mark>改寫前</mark></p>
+<p>這個寫法是為了避免當<code>map.get(key)</code>為<code>null</code>時，直接<code>.add()</code> 發生<code>NullPointerException</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Map&lt;String,List&lt;String&gt;&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line"><span class="keyword">for</span>(String str : strs)&#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">key</span> <span class="operator">=</span> sortStr(str);</span><br><span class="line">    <span class="comment">// key不存在於map </span></span><br><span class="line">    <span class="keyword">if</span>(map.get(key)==<span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="comment">// 手動創建一個新的List </span></span><br><span class="line">        List&lt;String&gt; temp = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        temp.add(str);</span><br><span class="line">        <span class="comment">// List放回map </span></span><br><span class="line">        map.put(key,temp);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">// map原本就有該key，就直接取出List </span></span><br><span class="line">        List&lt;String&gt; strings = map.get(key);</span><br><span class="line">        strings.add(str);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><mark>改寫後</mark></p>
+<p>更好的寫法是，先透過 <code>map.computeIfAbsent()</code> 來確保在key不存在於map時，先在map中加進該 key:value pair，就可以避免上面<code>map.get(key)</code>為<code>null</code>的情況</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Map&lt;String,List&lt;String&gt;&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line"><span class="keyword">for</span>(String str : strs)&#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">key</span> <span class="operator">=</span> sortStr(str);</span><br><span class="line">    <span class="comment">// 確保在key不存在於map時，先在map中加進該key:value pair </span></span><br><span class="line">    map.computeIfAbsent(key,k-&gt;<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;());</span><br><span class="line">    map.get(key).add(str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>技術</category>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>寫法優化</tag>
+        <tag>Leetcode</tag>
       </tags>
   </entry>
 </search>
